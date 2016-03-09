@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find Your Ideal Weight!</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Find Your Ideal Weight!">
+  <meta name="author" content="BrandonChia">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/slides" 
+    src="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Find Your Ideal Weight!</h1>
+    <h2>Data product assignment</h2>
+    <p>BrandonChia<br/>Student in Data Science Specialization</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>What&#39;s my app</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>Show you the ideal weight associated with your height</p></li>
+<li><p>Input your weight, height and gender data</p></li>
+<li><p>Share your workout schedule</p></li>
+<li><p>Tell us your favorite sports</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Easy to use</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>All you need to do is three steps</p>
+
+<ul>
+<li><p>Step 1: Input numbers for weight, height</p></li>
+<li><p>Step 2: Check your gender</p></li>
+<li><p>Step 3: Submit your answer</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Algorithm</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The algorithm is based on the report published and recommanded by World Health Organization</p>
+
+<p><em>For male</em></p>
+
+<pre><code class="r">print (&#39;ideal weight = ( Height - 80 ) * 0.7&#39;)
+idealWeiM &lt;- function(h) (h-80) * 0.7
+</code></pre>
+
+<p><em>For female</em></p>
+
+<pre><code class="r">print (&#39;ideal weight = (Height -70) * 0.6&#39;)
+idealWeiF &lt;- function(h) (h-70) * 0.6
+</code></pre>
+
+<p><em>It is good for people whose weight is between 0.9 times of and 1.1 times of ideal weight.</em></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>I&#39;m 176 centimeter in height and 70 kilogram in weight,and I&#39;m male.</p>
+
+<pre><code class="r">idealWei &lt;-function(sex,h){
+        ifelse(sex ==&#39;male&#39;,idealWeiM(h),idealWeiF(h))
+}
+print(paste(&#39;My ideal weight is in the interval:&#39;))
+idealWei(&#39;male&#39;,176)*0.9
+idealWei(&#39;male&#39;,176)*1.1
+</code></pre>
+
+<pre><code>## [1] &quot;My ideal weight is in the interval:&quot;
+## [1] 60.48
+## [1] 73.92
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='What&#39;s my app'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Easy to use'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Algorithm'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Example'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
